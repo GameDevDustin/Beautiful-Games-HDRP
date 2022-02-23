@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7545182563377337393
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5ab44aadfb1804db5fd470983ac1b8, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 0.7518203, y: 0.81950754, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 0.9906524, y: 0.89905643, z: 1, w: 0}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 0.6482027, y: 0.72204524, z: 1, w: 0}
 --- !u!114 &-6670924457886717702
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -313,7 +336,7 @@ MonoBehaviour:
     max: 1
   screenFadeDistance:
     m_OverrideState: 1
-    m_Value: 0.439
+    m_Value: 1
     min: 0
     max: 1
   accumulationFactor:
@@ -346,7 +369,7 @@ MonoBehaviour:
     max: 1
   m_SmoothnessFadeStart:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
     min: 0
     max: 1
   m_RayMaxIterations:
@@ -404,6 +427,8 @@ MonoBehaviour:
   - {fileID: -6440166495395622231}
   - {fileID: -2127674894636678818}
   - {fileID: -6670924457886717702}
+  - {fileID: -7545182563377337393}
+  - {fileID: 7919103204930083299}
 --- !u!114 &747098994415714109
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -545,10 +570,10 @@ MonoBehaviour:
     m_Value: 1
   colorMode:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   color:
     m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
@@ -590,7 +615,7 @@ MonoBehaviour:
     m_Value: 1
   albedo:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -772,11 +797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
   m_Name: Exposure
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 0
   meteringMode:
     m_OverrideState: 1
     m_Value: 4
@@ -785,7 +810,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 1.28
   compensation:
     m_OverrideState: 1
     m_Value: 0
@@ -804,16 +829,25 @@ MonoBehaviour:
         time: -10
         value: -10
         inSlope: 0
-        outSlope: 1
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+        time: 5.7249928
+        value: 10.526878
+        inSlope: 1.0000001
+        outSlope: 1.0000001
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 20
         value: 20
         inSlope: 1
-        outSlope: 0
+        outSlope: 1
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
@@ -917,6 +951,36 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
     min: 0
+--- !u!114 &7919103204930083299
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598e2d32e2c7b0c418e030c3236d663a, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  quality:
+    m_OverrideState: 0
+    m_Value: 1
+  spectralLut:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.01
+    min: 0
+    max: 1
+  m_MaxSamples:
+    m_OverrideState: 0
+    m_Value: 6
+    min: 3
+    max: 24
 --- !u!114 &8049981929359091865
 MonoBehaviour:
   m_ObjectHideFlags: 3
